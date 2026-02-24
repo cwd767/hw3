@@ -1,7 +1,7 @@
 class PlacesController < ApplicationController
   
   def index
-    @places = Place.all
+    @places = Place.all.order(:name)
   end
 
   def new
