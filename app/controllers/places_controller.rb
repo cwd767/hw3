@@ -8,6 +8,8 @@ class PlacesController < ApplicationController
   end
 
   def show
+    @place = Place.find(params[:id])
+    @entries = @place.entries
   end
 
   def create

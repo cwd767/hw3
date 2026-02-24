@@ -1,0 +1,22 @@
+<h1>New Memory for <%= @place.name %></h1>
+
+<form action="/entries" method="post">
+  <input type="hidden" name="place_id" value="<%= @place.id %>">
+
+  <p>
+    <label>Title</label><br>
+    <input type="text" name="title">
+  </p>
+  <p>
+    <label>Description</label><br>
+    <textarea name="description"></textarea>
+  </p>
+  <p>
+    <label>Date</label><br>
+    <input type="date" name="occurred_on">
+  </p>
+  <button type="submit">Save Entry</button>
+</form>
+
+<br>
+<a href="/places/<%= @place.id %>">Cancel</a>
